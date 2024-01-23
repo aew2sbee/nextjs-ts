@@ -8,8 +8,9 @@ type SSGProps = {
 }
 
 const Main: next.NextPage<SSGProps> = (props) => {
-  const { message } = props
-  const router = useRouter();
+  // const { message } = props
+  // const router = useRouter();
+
   return (
     <>
       <Head>
@@ -17,7 +18,11 @@ const Main: next.NextPage<SSGProps> = (props) => {
         <Link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <button onClick={() => router.push("/ssg")}>Go to SSG Page</button>
+      fetcher
+
+
+
+        {/* <button onClick={() => router.push("/ssg")}>Go to SSG Page</button> */}
         {/* <button onClick={() => router.reload()}>reload</button> */}
         {/* <Link href="/ssg">Go to SSG Page</Link> */}
         {/* <Link
@@ -35,16 +40,5 @@ const Main: next.NextPage<SSGProps> = (props) => {
     </>
   )
 }
-
-// export const getStaticProps: next.GetStaticProps<SSGProps> = async (
-//   context
-// ) => {
-//   const timestamp = new Date().toLocaleString();
-//   const message = `[${timestamp}] : The getStaticProps was executed`;
-//   console.log(message);
-//   return {
-//     props: { message },
-//   };
-// };
 
 export default Main
